@@ -1,0 +1,259 @@
+.dashboard {
+    color: $gray;
+    height: 100%;
+    background: #EDEEF0;
+    font-family: "proxima-nova",sans-serif;
+    font-size: 16px;
+    padding-top: 25%;
+    padding-right: 10%;
+    padding-bottom: 0px;
+    padding-left: 10%;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+
+    @media (min-width: $screen-sm) {
+        padding-top: 135px;
+        padding-right: 5%;
+        padding-bottom: 300px;
+        padding-left: 5%;
+    }
+
+    &__nav {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 20%;
+        height: 100%;
+        padding: 12px;
+        background: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        color:  black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-right: 50px;
+
+        &__header {
+            font-family: "proxima-nova",sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            width: 100%;
+            color: black;
+            border-bottom: 1px dotted #dcdddf;
+            padding-bottom: 12px;
+        }
+
+        &__body {
+            padding-top: 12px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            &__item {
+                margin-bottom: 12px;
+                font-size: 15px;
+                cursor: pointer;
+
+                &:hover, &:active, {
+                    text-decoration: underline;
+                } 
+            }
+        }
+    }
+
+    &__cards-and-btn {
+        width: 80%;
+        // height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center; 
+    }
+
+    &__cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center; 
+
+        @media (min-width: $screen-sm) {
+            flex-direction: row;
+        }  
+    }
+    
+
+    &__card {
+        width: 31%;
+        padding: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        color:  black;
+        margin-bottom: 40px;
+
+        &__header {
+            font-family: "proxima-nova",sans-serif;
+            font-weight: 600;
+            color: black;
+            width: 100%;
+            border-bottom: 1px dotted #dcdddf;
+            padding-bottom: 12px;
+        }
+
+        &__body {
+            width: 100%;
+            padding-top: 12px;
+            display: flex;
+            // background: lightblue;
+
+            &__rank {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+        
+                @media (min-width: $screen-sm) {
+                    width: 5%;
+                    margin-top: 0px;
+                }  
+                
+            }
+
+            &__img {
+                margin-left: 10px;
+                // background: red;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+        
+                @media (min-width: $screen-sm) {
+                    width: 40%;
+                }   
+        
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                
+            }
+
+            &__name {
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 100%;
+                display: flex;
+                font-size: 15px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+        
+                @media (min-width: $screen-sm) {
+                    // width: 30%;
+                } 
+                
+            }
+
+            &__value {
+                padding-left: 10px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+        
+                @media (min-width: $screen-sm) {
+                    width: 10%;
+                } 
+                // display: flex;
+            }
+            
+        }
+    }
+
+    &__btn {
+        background: white;
+        padding: 10px 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        font-family: "proxima-nova",sans-serif;
+        font-weight: 500;
+        color: black;
+        font-size: 18px;
+        border: 1px solid white;
+        font-family: "proxima-nova",sans-serif;
+        text-transform: uppercase;
+        // margin-top: -10px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li:hover {
+        transform: scale(1.03);
+        transition-duration: .25s;
+        box-shadow: 0px 0px 46px 9px rgba(151, 147, 147, 0.25);
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 25px;
+        border: .25px solid $gray;
+        padding: 10px;
+        cursor: pointer;
+
+        @media (min-width: $screen-sm) {
+            flex-direction: row;
+        }
+    }
+
+    span {
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    &__text-container {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (min-width: $screen-sm) {
+            width: 80%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }   
+        
+    }
+
+    &__img-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+        @media (min-width: $screen-sm) {
+            width: 20%;
+            margin-top: 0px;
+        }   
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+};
